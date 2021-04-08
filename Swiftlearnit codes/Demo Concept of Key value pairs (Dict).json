@@ -1,0 +1,46 @@
+
+-- Schema on Write
+create table ama
+    (
+PersonId int,
+lastname nvarchar(224),
+firstname nvarchar(100),
+address nvarchar(100)
+
+
+)
+
+insert into ama
+    values ( 1,"solomon","ansah","256 rd"),
+    ( 2,"john","ansah","3456 rd")
+
+
+
+    select * from ama
+
+
+
+begin transaction
+drop table ama
+
+
+rollback tran
+
+
+
+
+    For Key Value and JSON related format
+    name of dictionary= table name
+    Key-- Name of column
+    Value- attributes/values
+
+
+
+    ama=[
+        {personid:[1,2],
+        lastname:["solomon","john"],
+    firstname:["ansah","ansah"],
+"address":["256 rd","3456 rd"]}
+
+
+]
